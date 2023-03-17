@@ -1,0 +1,56 @@
+Shopping Cart
+==============================================================
+Integer NoBarang,Total,Fanta,TehPucuk,Qtela,Chitato
+String More
+Boolean selesai
+==============================================================
+Total = 0
+Fanta = 5000
+Teh Pucuk = 3000
+Qtela = 8000
+Chitato = 12000
+selesai = False
+
+WHILE (selesai = FALSE) do {
+    Output "List Barang :
+            1. Fanta
+            2. Teh Pucuk
+            3. Qtela
+            4. Chitato
+            Pilih Barang yang ingin dimasukkan Cart (Nomor Barang) : "
+    Input NoBarang
+
+    if (NoBarang > 0 && NoBarang <5) then{
+        if (NoBarang=1) then{
+            Total = Total + Fanta
+            Output "Anda telah memasukkan Fanta kedalam Cart anda
+                    Total Belanja : " + Total
+        }else if (NoBarang=2) then{
+            Total = Total + TehPucuk
+            Output "Anda telah memasukkan TehPucuk kedalam Cart anda
+                    Total Belanja : " + Total
+        }else if (NoBarang=3) then{
+            Total = Total + Qtela
+            Output "Anda telah memasukkan Qtela kedalam Cart anda
+                    Total Belanja : " + Total
+        }else if (NoBarang=4) then{
+            Total = Total + Chitato
+            Output "Anda telah memasukkan Chitato kedalam Cart anda
+                    Total Belanja : " + Total
+        }
+
+        Output "Ingin memasukkan barang lagi? (y/n)"
+        Input More
+
+        if (More = "y") then{
+            selesai = false
+        }else if (More = "n") then {
+            selesai = true
+        }
+
+    }else{
+        Output "Barang tidak tersedia, Masukkan angka 1-4"
+    }
+}
+
+Output "Total Harga di Shopping Cart : " + Total
